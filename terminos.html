@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos de servicio — Cittawa</title>
+<meta name="description" content="Términos y condiciones de uso del servicio Cittawa.">
+<link rel="icon" type="image/png" href="./public/cittawa-logo.png">
+<link rel="apple-touch-icon" href="./public/cittawa-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#1A1A1A;
+    --negro-suave:#242320;
+    --naranja:#F97316;
+    --naranja-suave:#FDBA74;
+    --naranja-glow:rgba(249,115,22,.35);
+    --crema:#FFF7ED;
+    --gris:#F5F5F4;
+    --linea:#E7E2D8;
+    --texto-claro:#F4EFE6;
+    --texto-atenuado:#8A8578;
+    --font-display:'Poppins',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--negro) var(--crema);}
+  ::-webkit-scrollbar{width:11px;height:11px;}
+  ::-webkit-scrollbar-track{background:var(--crema);}
+  ::-webkit-scrollbar-thumb{background:var(--negro);border-radius:100px;border:2.5px solid var(--crema);}
+  ::-webkit-scrollbar-thumb:hover{background:var(--naranja);}
+  body{
+    font-family:var(--font-display);background:var(--crema);color:var(--negro);
+    line-height:1.6;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;min-height:100vh;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:760px;margin:0 auto;}
+
+  h1{font-weight:800;letter-spacing:-.025em;line-height:1.08;font-size:clamp(32px,5vw,46px);}
+  h2{font-weight:700;letter-spacing:-.02em;line-height:1.2;font-size:22px;margin-top:44px;margin-bottom:14px;}
+  h3{font-weight:700;font-size:15.5px;margin-top:22px;margin-bottom:8px;}
+  p,li{color:#4a453b;font-size:15px;}
+  p{margin-bottom:14px;}
+  ul,ol{margin:0 0 14px 20px;}
+  li{margin-bottom:8px;}
+  strong{color:var(--negro);}
+  .placeholder{background:rgba(249,115,22,.14);color:#9A3E0C;padding:1px 6px;border-radius:5px;font-family:var(--font-mono);font-size:13.5px;}
+
+  .stamp{
+    display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12.5px;letter-spacing:.03em;color:var(--naranja);
+    background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.28);padding:6px 14px 6px 11px;border-radius:100px;margin-bottom:22px;
+  }
+  .stamp .dot{width:6px;height:6px;border-radius:50%;background:var(--naranja);}
+
+  header{position:sticky;top:0;left:0;right:0;z-index:80;padding:18px 24px;background:rgba(255,247,237,.86);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--linea);}
+  nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;}
+  .brand-mark{width:34px;height:34px;border-radius:9px;background:var(--negro);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .brand-mark svg{width:19px;height:19px;}
+  .back{font-size:13.5px;font-weight:600;color:var(--negro);opacity:.7;display:flex;align-items:center;gap:6px;transition:opacity .15s;}
+  .back:hover{opacity:1;}
+
+  .layout{padding:64px 24px 100px;}
+  .updated{font-size:13px;color:var(--texto-atenuado);margin-bottom:10px;}
+
+  .card{background:#fff;border:1.5px solid var(--linea);border-radius:22px;padding:36px 40px;box-shadow:0 20px 50px -34px rgba(26,26,26,.2);}
+
+  .toc{background:var(--gris);border-radius:16px;padding:22px 26px;margin:28px 0 6px;}
+  .toc h3{margin-top:0;font-size:13px;color:var(--texto-atenuado);font-family:var(--font-mono);letter-spacing:.03em;}
+  .toc ol{margin:10px 0 0 18px;}
+  .toc a{color:var(--negro);font-size:14px;font-weight:500;}
+  .toc a:hover{color:var(--naranja);}
+
+  footer{background:#141310;color:#8A8578;padding:34px 24px;text-align:center;font-size:12.5px;margin-top:20px;}
+  footer a{color:var(--naranja);font-weight:600;}
+
+  @media(max-width:600px){
+    .card{padding:26px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="ico-bubble" viewBox="0 0 100 100"><path d="M27 22h46a9 9 0 0 1 9 9v27a9 9 0 0 1-9 9h-28l-9 12v-12h-9a9 9 0 0 1-9-9V31a9 9 0 0 1 9-9z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="50" cy="45" r="13" fill="none" stroke="currentColor" stroke-width="5"/><path d="M50 39v7l5 5" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ico-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header>
+  <nav>
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg viewBox="0 0 100 100" style="color:var(--naranja)"><use href="#ico-bubble"/></svg></span>
+      cittawa
+    </a>
+    <a class="back" href="index.html"><svg width="15" height="15" viewBox="0 0 24 24"><use href="#ico-arrow-left"/></svg>Volver a la web</a>
+  </nav>
+</header>
+
+<section class="layout">
+  <div class="wrap">
+    <span class="stamp"><span class="dot"></span>Legal</span>
+    <h1>Términos de servicio</h1>
+    <p class="updated">Última actualización: 08/08/2026</p>
+
+    <div class="card">
+      <p>Estos términos regulan el uso del servicio Cittawa, ofrecido por Francisco Javier Rodríguez Martín. Al solicitar una demo o contratar el servicio, aceptas estas condiciones.</p>
+
+      <div class="toc">
+        <h3>Índice</h3>
+        <ol>
+          <li><a href="#objeto">Objeto del servicio</a></li>
+          <li><a href="#descripcion">Qué es Cittawa (y qué no es)</a></li>
+          <li><a href="#contratacion">Cómo se contrata el servicio</a></li>
+          <li><a href="#precio">Precio y forma de pago</a></li>
+          <li><a href="#duracion">Duración y cancelación</a></li>
+          <li><a href="#obligaciones-cliente">Tus obligaciones como cliente</a></li>
+          <li><a href="#obligaciones-cittawa">Nuestras obligaciones y límites</a></li>
+          <li><a href="#terceros">Dependencia de servicios de terceros</a></li>
+          <li><a href="#propiedad">Propiedad intelectual</a></li>
+          <li><a href="#datos">Datos personales</a></li>
+          <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+          <li><a href="#modificaciones">Modificaciones</a></li>
+          <li><a href="#legislacion">Legislación y jurisdicción</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ol>
+      </div>
+
+      <h2 id="objeto">1. Objeto del servicio</h2>
+      <p>Cittawa es un servicio que proporciona a negocios un asistente de inteligencia artificial para gestionar la atención al cliente y las citas a través de WhatsApp, integrado con el calendario del negocio (cal.com).</p>
+
+      <h2 id="descripcion">2. Qué es Cittawa (y qué no es)</h2>
+      <p>Cittawa automatiza respuestas y gestión de citas mediante inteligencia artificial. Hacemos todo lo posible porque las respuestas sean correctas y útiles, pero:</p>
+      <ul>
+        <li>No garantizamos que las respuestas generadas por IA sean exactas al 100% en todos los casos.</li>
+        <li>El servicio no sustituye la supervisión del propio negocio sobre su atención al cliente.</li>
+        <li>Recomendamos revisar periódicamente el funcionamiento del asistente, especialmente al principio.</li>
+      </ul>
+
+      <h2 id="contratacion">3. Cómo se contrata el servicio</h2>
+      <p>El servicio se contrata de forma individual con cada negocio, tras solicitar una demo a través de esta web. No existe un proceso de alta automático o de autoservicio: la configuración inicial (número de WhatsApp, calendario, información del negocio) la realizamos junto con el cliente.</p>
+
+      <h2 id="precio">4. Precio y forma de pago</h2>
+      <p>El precio del servicio se acuerda de forma individual con cada cliente en función de las funcionalidades contratadas, y se comunica antes de iniciar cualquier cobro. El pago se realiza mediante transferencia bancaria o Bizum, con periodicidad mensual.</p>
+
+      <h2 id="duracion">5. Duración y cancelación</h2>
+      <p>El servicio no tiene permanencia mínima. El cliente puede solicitar la baja en cualquier momento, escribiendo a cittawa.ai@gmail.com.</p>
+
+      <h2 id="obligaciones-cliente">6. Tus obligaciones como cliente</h2>
+      <p>Al usar Cittawa, el negocio cliente se compromete a:</p>
+      <ul>
+        <li>Proporcionar información veraz sobre su negocio, servicios y horarios.</li>
+        <li>Usar el servicio de forma lícita, sin emplearlo para enviar spam, contenido fraudulento o ilegal.</li>
+        <li>Contar con el consentimiento necesario de sus propios clientes para que Cittawa gestione sus datos de contacto y conversaciones, conforme a la normativa de protección de datos aplicable.</li>
+        <li>Mantener actualizada la información relevante para el buen funcionamiento del asistente (precios, servicios, horarios).</li>
+      </ul>
+
+      <h2 id="obligaciones-cittawa">7. Nuestras obligaciones y límites</h2>
+      <p>Nos comprometemos a prestar el servicio con diligencia, pero no podemos garantizar:</p>
+      <ul>
+        <li>Una disponibilidad del 100% en todo momento, ya que el servicio depende de infraestructura propia y de terceros (ver siguiente sección).</li>
+        <li>Que el asistente resuelva absolutamente todas las consultas de todos los clientes finales sin ningún error.</li>
+      </ul>
+      <p>En caso de incidencias, nos comprometemos a informar y resolver lo antes posible, tal como se describe en nuestro sistema de monitorización y alertas.</p>
+
+      <h2 id="terceros">8. Dependencia de servicios de terceros</h2>
+      <p>Cittawa funciona integrando servicios de terceros que no controlamos directamente: Meta (WhatsApp Business Platform), OpenAI, y Cal.com. Si alguno de estos servicios sufre una interrupción, cambia sus condiciones de acceso, o deja de estar disponible, el funcionamiento de Cittawa puede verse afectado. Haremos lo posible por minimizar el impacto y avisar de cualquier incidencia relevante.</p>
+
+      <h2 id="propiedad">9. Propiedad intelectual</h2>
+      <p>El nombre "Cittawa", su logotipo, el diseño de esta web y el software desarrollado para prestar el servicio son propiedad de Francisco Javier Rodríguez Martín. No se autoriza su reproducción, distribución o uso sin permiso expreso.</p>
+
+      <h2 id="datos">10. Datos personales</h2>
+      <p>El tratamiento de datos personales se rige por nuestra <a href="privacidad.html">Política de Privacidad</a>. Si contratas Cittawa para tu negocio, se formalizará adicionalmente un contrato de encargado de tratamiento que regula cómo gestionamos los datos de tus propios clientes finales.</p>
+
+      <h2 id="responsabilidad">11. Limitación de responsabilidad</h2>
+      <p>En la medida permitida por la ley, no seremos responsables de:</p>
+      <ul>
+        <li>Pérdidas de negocio, de clientes o de ingresos derivadas de fallos en servicios de terceros (Meta, OpenAI, Cal.com) fuera de nuestro control.</li>
+        <li>Daños indirectos derivados del uso del servicio.</li>
+        <li>Decisiones tomadas por el negocio cliente basándose en información generada por el asistente sin verificación propia.</li>
+      </ul>
+      <p>Nuestra responsabilidad total, en caso de reclamación justificada, se limitará al importe abonado por el cliente en el último mes.</p>
+
+      <h2 id="modificaciones">12. Modificaciones</h2>
+      <p>Podemos actualizar estos términos cuando sea necesario. Si el cambio afecta de forma relevante a clientes activos, lo comunicaremos con antelación razonable.</p>
+
+      <h2 id="legislacion">13. Legislación y jurisdicción</h2>
+      <p>Estos términos se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de Sevilla, salvo que la normativa de consumidores establezca un fuero distinto de carácter obligatorio.</p>
+
+      <h2 id="contacto">14. Contacto</h2>
+      <p>Para cualquier duda sobre estos términos, escríbenos a cittawa.ai@gmail.com.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Cittawa · <a href="https://froddes.com">Froddes</a>
+</footer>
+
+</body>
+</html>

@@ -10,6 +10,7 @@ export default defineConfig({
         privacidad: resolve(__dirname, 'privacidad.html'),
         terminos: resolve(__dirname, 'terminos.html'),
         aviso: resolve(__dirname, 'aviso.html'),
+        onboarding: resolve(__dirname, 'onboarding.html'),
       }
     }
   }
